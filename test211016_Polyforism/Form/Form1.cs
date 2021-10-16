@@ -41,9 +41,9 @@ namespace test211016_Polyforism
             List<IPrint> prints = new List<IPrint> { printA, printB };
 
             string text = "";
-            foreach (var item in prints)
+            foreach (var print in prints)
             {
-                text += item.Print();
+                text += print.Print();
             }
 
             TB_Notice.Text = text;
