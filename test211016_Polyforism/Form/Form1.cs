@@ -24,14 +24,29 @@ namespace test211016_Polyforism
             Print_TypeA print = new Print_TypeA();
             TextControl textControl = new TextControl(print);
 
-            txt_Notice.Text = textControl.GetText();
+            TB_Notice.Text = textControl.GetText();
         }
         private void btn_Print_B_Click(object sender, EventArgs e)
         {
             Print_TypeB print = new Print_TypeB();
             TextControl textControl = new TextControl(print);
 
-            txt_Notice.Text = textControl.GetText();
+            TB_Notice.Text = textControl.GetText();
+        }
+
+        private void btn_Print_C_Click(object sender, EventArgs e)
+        {
+            Print_TypeA printA = new Print_TypeA();
+            Print_TypeB printB = new Print_TypeB();
+            List<IPrint> prints = new List<IPrint> { printA, printB };
+
+            string text = "";
+            foreach (var item in prints)
+            {
+                text += item.Print();
+            }
+
+            TB_Notice.Text = text;
         }
     }
 }

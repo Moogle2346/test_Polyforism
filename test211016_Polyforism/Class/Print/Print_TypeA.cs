@@ -10,7 +10,7 @@ namespace test211016_Polyforism.Class.Print
     {
         public string Print()
         {
-            return "Type A";
+            return "Type A" + Environment.NewLine;
         }
     }
 }
