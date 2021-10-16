@@ -21,14 +21,14 @@ namespace test211016_Polyforism
 
         private void btn_Print_A_Click(object sender, EventArgs e)
         {
-            IPrint print = new Print_TypeA();
+            Print_TypeA print = new Print_TypeA();
             TextControl textControl = new TextControl(print);
 
             txt_Notice.Text = textControl.GetText();
         }
         private void btn_Print_B_Click(object sender, EventArgs e)
         {
-            IPrint print = new Print_TypeB();
+            Print_TypeB print = new Print_TypeB();
             TextControl textControl = new TextControl(print);
 
             txt_Notice.Text = textControl.GetText();
